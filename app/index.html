@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>sample</title>
@@ -12,11 +13,43 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
 </head>
+
 <body>
-    <h1>Hello</h1>
-    <form action="">
-        <button class="btn">Button</button>
-    </form>
+    <div class="wrapper">
+        <div class="slides">
+            <div class="rotateMe">
+                <section class="slide slide1">
+                    1
+                </section>
+                <section class="slide slide2">
+                    2
+                </section>
+                <section class="slide slide3">
+                    3
+                </section>
+                <section class="slide slide4">
+                    4
+                </section>
+                <section class="slide slide5">
+                    5
+                </section>
+                <section class="slide slide6">
+                    6
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        'use strict';
+        let rotate = document.querySelector('.rotateMe');
+        let i = 0;
+        setInterval(function(){
+            rotate.style.transform = "rotateX("+ i + "deg)";
+            i++;
+        }, 10)
+
+    </script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -28,4 +61,5 @@
     <script src="js/plugins.js"></script>
     <!-- endbuild -->
 </body>
+
 </html>
