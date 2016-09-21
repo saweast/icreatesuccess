@@ -7,10 +7,8 @@
 }
 
 .slides {
-    // background: rgba(0, 0, 0, .7);
     width: 100%;
     height: 1px;
-    // margin: auto;
     transform-style: preserve-3d;
     perspective-origin: center;
     transform: rotateX(0deg) translateZ(-85vh);
@@ -18,7 +16,6 @@
 }
 
 .rotateMe {
-    // transform: rotateX(90deg);
     transform-style: preserve-3d;
     transform-origin: 50% 50%;
     height: 100vh;
@@ -31,37 +28,104 @@
     perspective-origin: 50% 50%;
     text-align: center;
     line-height: 100vh;
-    font-size: 4em;
-    border: 10px solid black;
     box-sizing: border-box;
 }
 
 .slide1 {
-    background-color: red;
     transform: rotateX(0deg) translateZ(85vh);
 }
 
 .slide2 {
     background-color: blue;
-    transform: rotate3d(1,0,0,-60deg) translateZ(85vh);
+    transform: rotate3d(1, 0, 0, -60deg) translateZ(85vh);
 }
 
 .slide3 {
-   	background-color: yellow;
-    transform: rotate3d(01,0,0,-120deg) translateZ(85vh);
+    background-color: yellow;
+    transform: rotate3d(01, 0, 0, -120deg) translateZ(85vh);
 }
 
-.slide4 {    
+.slide4 {
     background-color: green;
-    transform: rotate3d(1,0,0,-180deg) translateZ(85vh);
+    transform: rotate3d(1, 0, 0, -180deg) translateZ(85vh);
 }
-.slide5 {    
+
+.slide5 {
     background-color: lightblue;
-    transform: rotate3d(1,0,0,-240deg) translateZ(85vh);
+    transform: rotate3d(1, 0, 0, -240deg) translateZ(85vh);
 }
-.slide6 {    
+
+.slide6 {
     background-color: brown;
-    transform: rotate3d(1,0,0,-300deg) translateZ(85vh);
+    transform: rotate3d(1, 0, 0, -300deg) translateZ(85vh);
 }
 
+.wrap {
+    height: 100vh;
+    background-image: url('../images/girl.png'), url('../images/dot.png');
+    background-repeat: no-repeat, repeat;
+    background-size: 80vh auto, auto;
+    background-position: bottom left, -10px;
+}
 
+.wrap .logo {
+    position: absolute;
+    top: 12vh;
+    left: 38vh;
+    height: 30vh;
+    width: 30vh;
+    background-size: 100% 100%;
+    background-image: url("../images/wecreate.png");
+    background-size: 100% 100%;
+    z-index: 2;
+}
+
+.wrap .idea {
+    position: absolute;
+    top: 2vh;
+    left: 20vh;
+    height: 30vh;
+    width: 30vh;
+    background-image: url("../images/lamp.png");
+    background-size: 100% 100%;
+}
+
+.wrap .success {
+    position: absolute;
+    top: 5vh;
+    left: 55vh;
+    height: 24vh;
+    width: 30vh;
+    background-image: url("../images/success.png");
+    background-size: 100% 100%;
+}
+
+$yellow: yellow;
+$purple: #ec228f;
+.promo {
+    line-height: 1.4em;
+    position: absolute;
+    right: 10vh;
+    bottom: 0;
+    width: 50%;
+    h2 {
+        font-size: 5em;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+        color: $yellow;
+        word-wrap: break-word;
+        span {
+            &:before,
+            &:after {
+                visibility: hidden;
+                display: block;
+                font-size: 0;
+                content: " ";
+                clear: both;
+                height: 0;
+            }
+            color: white;
+        }
+    }
+}
