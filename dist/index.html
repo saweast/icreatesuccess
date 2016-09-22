@@ -1,17 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>sample</title>
+    <title>Web Design Los Angeles | Web Design California | SEO, Branding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/cs<link href=" https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic " rel="stylesheet ">
+    <script src="https://use.fontawesome.com/dc4f99a001.js "></script>
+    <link rel="icon " type="image/png " href="./images/icon_wc.png ">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <h1>Hello</h1>
-    <form action="">
-        <button class="btn">Button</button>
-    </form>
+<header>
+    
+        <ul class="soc ">
+        <li><a href="# "><i class="fa fa-yelp " aria-hidden="true "></i></a></li>
+        <li><a href="# "><i class="fa fa-google-plus " aria-hidden="true "></i></a></li>
+    </ul>
+    <ul class="contacts ">
+        <li><i class="fa fa-map-marker " aria-hidden="true "></i>1860 N. Fuller Ave., Los Angeles, CA 90046</li>
+        <li><i class="fa fa-phone " aria-hidden="true "></i>(888) 449-3011</li>
+    </ul>
+  
+</header>
+<div class="wrapper " onscroll="alert( 'scrolled'); ">
+    <div class="slides ">    
+        <div class="rotateMe " style="transform: rotateX(0deg); ">
+            <section class="slide slide1 ">
+                <div class="wrap ">
+                    <div class="degrayscale">
+                        
+                    
+                        <div class="logo "></div>
+                        <div class="idea "></div>
+                        <div class="success "></div>
+                        <div class="promo ">
+                            <h2>Grow <span>your  business</span> with us</h2>
+                            <div class="services ">
+                                <ul>
+                                    <li>Brand strategy</li>
+                                    <li>System developing</li>
+                                    <li>Digital marketing</li>
+                                    <li>Customer support</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="# " class="button ">Get Your Free Quote Today<i class="fa fa-arrow-right " aria-hidden="true "></i></a>
+                        <a href="# " class="next "><i class="fa fa-arrow-down " aria-hidden="true "></i></a>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="slide slide2 ">
+                <a href="# " class="next "><i class="fa fa-arrow-down " aria-hidden="true "></i></a>
+            </section>
+            <section class="slide slide3 ">
+                <a href="# " class="next "><i class="fa fa-arrow-down " aria-hidden="true "></i></a>
+            </section>
+            <section class="slide slide4 ">
+                <a href="# " class="next "><i class="fa fa-arrow-down " aria-hidden="true "></i></a>
+            </section>
+            <section class="slide slide5 ">
+                <a href="# " class="next "><i class="fa fa-arrow-down " aria-hidden="true "></i></a>
+            </section>
+            <section class="slide slide6 ">
+                <a href="# " class="next "><i class="fa fa-arrow-down " aria-hidden="true "></i></a>
+            </section>
+        </div>
+    </div>
+</div>
+    <script type="text/javascript ">
+    'use strict';
+    // let rotate = document.querySelector('.rotateMe');
+    // let i = 0;
+    // setInterval(function() {
+    //     rotate.style.transform = "rotateX( " + i + "deg) ";
+    //     i++;
+    // }, 10)
+    let nextButton = document.querySelectorAll('.next'),
+        rotate = document.querySelector('.rotateMe'),
+        wrapper = document.querySelector('.slide1');
+    function nextFunct() {
+        let valRotateX = rotate.style.transform,
+            rotateDeg = valRotateX.slice(8),
+            numberDeg = parseInt(rotateDeg);
+        rotate.style.transform = "rotateX( " + (numberDeg + 60) + "deg) ";
+    }
+    function prevFunct() {
+        let valRotateX = rotate.style.transform,
+            rotateDeg = valRotateX.slice(8),
+            numberDeg = parseInt(rotateDeg);
+        rotate.style.transform = "rotateX( " + (numberDeg - 60) + "deg) ";
+    }
+
+
+
+    
+    for (let i = 0; i < nextButton.length; i++) {
+        let item = nextButton[i];
+        item.addEventListener('click', nextFunct);
+    }
+    wrapper.addEventListener('scroll', function() {
+        console.log('scroll');
+    })
+    </script>
     <script src="scripts/vendor.js"></script>
     <script src="scripts/main.js"></script>
 </body>
+
 </html>
